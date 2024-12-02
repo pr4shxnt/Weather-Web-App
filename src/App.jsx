@@ -3,20 +3,46 @@ import Profile from "./assets/profile.jpg";
 import Logo from "./assets/logo.png";
 import Background from "./assets/background.jpg";
 import {
-  Search,
-  Github,
-  Instagram,
-  ChevronDown,
-  MapPin,
-  User,
-  CloudLightning,
-  Wind,
-  Droplets,
-  Thermometer,
+  Search, Github, Instagram, ChevronDown, MapPin, User, CloudLightning, Wind, Droplets, Thermometer, Cloud, Sun, Moon, WindArrowDown, CloudRainWind,
+  Flame,
+  CloudSun,  
 } from "lucide-react";
 import Home from './Home';
 
 const App = () => {
+  const getWeatherIcon = (condition) => {
+    switch (condition) {
+      case 'clear sky':
+        return <Sun size={45} />;
+      case 'few clouds':
+        return <Cloud size={45} />;
+      case 'Rain':
+        return <CloudRainWind size={45} />;
+        case 'light rain':
+        return <CloudRainWind size={45} />;
+      case 'Thunderstorm':
+        return <WindArrowDown size={45} />;
+      case 'smoke':
+        return <Flame size={45} />;
+        case 'scattered clouds':
+        return <Cloud size={45} />;
+        
+      case 'broken clouds':
+        return <Cloud size={45} />;
+      case 'snow':
+        return <Moon size={45} />;
+        case 'haze':
+        return <CloudSun size={45} />;
+      case 'drizzle':
+        return <Droplets size={45} />;
+      case 'Mist':
+        return <CloudLightning size={45} />;
+      default:
+        return <CloudLightning size={45} />;
+    }
+  };
+
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [locations, setLocations] = useState([]);
@@ -244,7 +270,13 @@ const App = () => {
                   </div>
                   
                 <div className=" flex flex-col justify-evenly md:flex-row gap-4">
-                    <h1 className='flex gap-1 w-full text-4xl text-white font-bold '><span ><CloudLightning size={45}/></span> <span className='flex flex-col'>{weatherData.condition} <small className='font-thin text-sm'>Look Outside</small></span></h1>
+                <h1 className="flex gap-1 w-full text-4xl text-white font-bold">
+  <span>{getWeatherIcon(weatherData.condition)}</span>
+  <span className="flex flex-col">
+    {weatherData.condition}
+    <small className="font-thin text-sm">Look Outside</small>
+  </span>
+</h1>
                     <h1 className='flex gap-1 w-full text-4xl text-white font-bold '><span ><Wind size={45}/></span> <span className='flex flex-col'>Wind <small className='font-thin text-sm'>{weatherData.windSpeed} m/s</small></span></h1>
                 </div>
 
