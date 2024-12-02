@@ -1,8 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Weatherize is a modern and user-friendly web application designed to provide accurate and real-time weather updates for any location. With a sleek and intuitive interface, users can search for their desired location using the search bar and view detailed weather information, including temperature, humidity, wind speed, and current conditions.Stay connected with Weatheriz to stay informed about the latest weather updates, all with ease and precision.
