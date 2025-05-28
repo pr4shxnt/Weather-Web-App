@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Profile from "./assets/profile.jpg";
-import Logo from "./assets/logo.png";
-import Background from "./assets/background.jpg";
+import Profile from "./assets/Profile.jpg";
+import Logo from "./assets/Logo.png";
+import Background from "./assets/Background.jpg";
 import {
   Search, Github, Instagram, ChevronDown, MapPin, User, CloudLightning, Wind, Droplets, Thermometer, Cloud, Sun, Moon, WindArrowDown, CloudRainWind,
   Flame,
