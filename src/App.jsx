@@ -47,7 +47,7 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [locations, setLocations] = useState([]);
   const [weatherData, setWeatherData] = useState(null);
-  const [unit, setUnit] = useState('C'); // 'C' for Celsius, 'F' for Fahrenheit
+  const [unit, setUnit] = useState('C'); 
   const dropdownRef = useRef(null);
   const searchRef = useRef(null);
 
@@ -69,7 +69,7 @@ const App = () => {
 
   const fetchWeatherData = async (city) => {
     try {
-      const apiKey = import.meta.env.VITE_API_KEY; // Store the API key securely in .env file
+      const apiKey = "6327c1f81c4ffd72eeeca7ab12f161b9" // Store the API key securely in .env file
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       const response = await fetch(url);
       const data = await response.json();
