@@ -69,7 +69,7 @@ const App = () => {
 
   const fetchWeatherData = async (city) => {
     try {
-      const apiKey = "6327c1f81c4ffd72eeeca7ab12f161b9" // Store the API key securely in .env file
+      const apiKey = import.meta.env.VITE_API_KEY;
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       const response = await fetch(url);
       const data = await response.json();
